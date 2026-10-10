@@ -37,7 +37,7 @@
     <!-- Generated from docs/PRIVACY_POLICY.md in Revati-Expo by scripts/render-privacy.mjs. Edit the markdown, then re-run it. -->
     <div class="container">
         <h1>Privacy Policy for Revati</h1>
-        <p class="last-updated"><strong>Effective:</strong> July 24, 2026 · <strong>Last updated:</strong> October 3, 2026</p>
+        <p class="last-updated"><strong>Effective:</strong> July 24, 2026 · <strong>Last updated:</strong> October 9, 2026</p>
         <p>Revati ("we", "our", "us") is published by Msunjay Enterprises. This policy explains what the <strong>Revati : Kundli &amp; Panchang</strong> app collects, where it goes, and how you can delete it. It covers the app on Android and on iPhone, which are the same app and handle your data the same way.</p>
         <p><em>This app was previously published as "AstroVeda". It is the same app under a new name.</em></p>
         <h2>1. The Short Version</h2>
@@ -45,7 +45,7 @@
             <li><strong>An account is optional.</strong> Everything works without one. If you sign in (Google, Apple or email), your name, email address and your saved Kundali profiles are stored with Google Firebase so you can back them up and restore them (section 3a). You can delete the account and its backup from the app.</li>
             <li>Panchang, Rashifal, Kundali, Guna Milan, Muhurat and numerology are <strong>calculated on your phone</strong>. Your birth details are never sent anywhere to produce them.</li>
             <li><strong>The app shows ads from Google AdMob</strong> (section 4), and counts which screens and features are used and reports crashes through Google Firebase (section 3b) — never what you typed.</li>
-            <li><strong>Revati PRO</strong> is an optional yearly subscription bought through Google Play or the App Store (section 3c). The optional AI features send only what they need to answer (section 3c).</li>
+            <li><strong>Revati PRO</strong> is an optional yearly subscription bought through Google Play or the App Store, or one free day of it for watching a video ad (section 3c). The optional AI features send only what they need to answer (section 3c).</li>
             <li>Nothing you enter — no name, birth detail or saved profile — ever leaves your phone unless you share it yourself, type a place name to look up, or sign in and back it up (section 3). The ads never see any of it.</li>
             <li>We do not sell, rent or trade any information, and we have none to sell.</li>
         </ul>
@@ -53,7 +53,9 @@
         <ul>
             <li><strong>Birth details.</strong> The name, date, time and place of birth you enter for a Kundali, a Guna Milan match or a saved profile, and your recent searches. They are kept in a database on your phone, encrypted with a key held by the phone's secure hardware (Android Keystore, iPhone Keychain). The key is never included in a backup, so a copy of the database is unreadable anywhere else.</li>
             <li><strong>Settings.</strong> Your language, rashi, city and reminder choices.</li>
-            <li><strong>Reminders.</strong> Panchang, Muhurat and festival reminders are scheduled on the phone itself, not sent from anywhere.</li>
+            <li><strong>A free day of PRO.</strong> When it started and when it ends, if you earned one by watching a video ad (section 3c). Nothing else is recorded with it.</li>
+            <li><strong>Reminders.</strong> Panchang, Muhurat and festival reminders, and up to four muhurats you ask to be reminded of, are scheduled on the phone itself, not sent from anywhere.</li>
+            <li><strong>Your questions about a chart.</strong> If you ask the AI about a birth chart, the last 20 questions and answers for that chart are kept in the same encrypted database as your birth details, so a follow-up can build on them. "Clear conversation" under that chart, or deleting all data, removes them. They are not included in a backup.</li>
         </ul>
         <p>None of this is sent to us unless you sign in and back up (section 3a).</p>
         <h2>3. What Leaves Your Phone</h2>
@@ -77,7 +79,7 @@
         </ul>
         <h2>3b. Usage Statistics, Crash Reports and Announcements</h2>
         <ul>
-            <li><strong>Usage statistics</strong> (Google Analytics for Firebase): which screens are opened and which features are used (for example "a Kundali was made"), with the app version, device model, operating system, language, country (estimated by Google from the IP address) and a random identifier Firebase makes for this installation. <strong>Never</strong> a name, birth detail, city, profile or anything you type. The advertising ID is not collected for this, and the data is not used for ad personalisation.</li>
+            <li><strong>Usage statistics</strong> (Google Analytics for Firebase): which screens are opened and which features are used (for example "a Kundali was made"), with the app version, device model, operating system, language, country (estimated by Google from the IP address) and a random identifier Firebase makes for this installation. Also counted: when a full-screen ad could have appeared, whether it did and, if not, why (for example "PRO is on"); how a rewarded video ended; the value Google estimates each ad earned; and each AI request's outcome and size in tokens, which is what it costs — never its words. <strong>Never</strong> a name, birth detail, city, profile or anything you type. The advertising ID is not collected for this, and the data is not used for ad personalisation.</li>
             <li><strong>Crash reports</strong> (Firebase Crashlytics): when the app crashes or a screen fails to open, the technical details of the failure, the device model, operating system, app version and the same installation identifier.</li>
             <li><strong>Announcements</strong> (Firebase Cloud Messaging): so the app can receive the occasional message to all users, Firebase gives this installation a notification token. It stays with Firebase; we never receive it or keep a list. Turn notifications off for Revati in the phone's settings to stop them.</li>
             <li>Firebase keeps analytics data for 2 months and crash reports for 90 days. Google's policy is at <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
@@ -85,7 +87,8 @@
         <h2>3c. Revati PRO and the AI Features (optional)</h2>
         <ul>
             <li><strong>Purchases.</strong> PRO is sold by Google Play and the App Store; they handle the payment and we never see your card or bank details. <strong>RevenueCat</strong>, which checks that a subscription is genuine, receives the store's purchase record and a random identifier for this installation — not your name or email. RevenueCat's policy is at <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a></li>
-            <li><strong>AI answers</strong> (Firebase AI Logic, Google's Gemini models). Only when you tap for one: - an AI horoscope insight sends your rashi, the period and that period's reading; - a question under Numerology sends your question, and the name, date of birth and numbers shown on that screen. <strong>Time and place of birth and your saved profiles are never sent.</strong> - the news card sends only the request for the news. Google processes these to produce the answer; we do not store them.</li>
+            <li><strong>A free day for a video.</strong> Watching a rewarded video ad to the end turns PRO on for 24 hours, at most once a day. The day is kept only on your phone (section 2); no account is needed and nothing about it is sent to us. The video itself is an ad like any other (section 4).</li>
+            <li><strong>AI answers</strong> (Firebase AI Logic, Google's Gemini models). Only when you tap for one: - an AI horoscope insight sends your rashi, the period and that period's reading; - a question under Numerology sends your question, and the name, date of birth and numbers shown on that screen; - a question about a birth chart sends your question, that chart's lagna, each planet's sign, house and degree, the Moon's nakshatra and the running dasha periods, and the last two questions and answers of that chart's conversation. <strong>Not</strong> the name, the date, time or place of birth — but these positions are worked out from them, so someone with an ephemeris could work the date and approximate time of birth back out. - <strong>Time and place of birth and your saved profiles themselves are never sent.</strong> - the news card sends only the request for the news. Google processes these to produce the answer; we do not store them.</li>
             <li><strong>App Check.</strong> So that only this app can ask for AI answers, the phone proves it is a genuine install through Google Play Integrity (Android) or Apple App Attest (iPhone). No personal information is part of that check.</li>
         </ul>
         <h2>4. Advertising</h2>
@@ -94,6 +97,7 @@
             <li><strong>On iPhone the app asks only for non-personalised ads</strong> and never asks to track you, so no advertising identifier is used there.</li>
             <li><strong>On Android</strong> you can reset or delete your advertising ID, or turn off personalised ads, in the phone's Settings → Google → Ads.</li>
             <li><strong>In the EEA, the UK and other places where the law requires it</strong>, the app asks for your consent before any ad is requested, and "Ad privacy choices" in Settings lets you change your answer.</li>
+            <li><strong>Kinds of ads.</strong> A banner between cards; now and then, after you finish a Kundali, a match or a numerology reading, a full-screen ad, which may be a video; and a <strong>rewarded video</strong> that plays only when you tap "Watch a video" on the PRO screen. Google tells the app only whether that video was watched to the end, so the free day can be given. There is no ad when the app opens, and none while PRO is on.</li>
             <li>Ads are rated for teens and above, and the app does not direct them at children.</li>
             <li>Your birth details, saved profiles and searches are never given to AdMob or anyone else.</li>
         </ul>
