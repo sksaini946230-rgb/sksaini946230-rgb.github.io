@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://sksaini946230-rgb.github.io/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Revati app icon beside the words Kundli and Panchang">
+<meta property="og:image:alt" content="The Revati diya logo beside the words Panchang, Rashifal, Kundali in English and Hindi">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Revati — Kundli &amp; Panchang">
 <meta name="twitter:description" content="Daily Panchang, Rashifal, Kundali and Guna Milan in Hindi and English.">
@@ -51,7 +51,8 @@
          font-weight: 700; text-decoration: none; padding: .9rem 1.4rem; border-radius: 999px; min-height: 48px; }
   .cta:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
   .note { color: var(--muted); font-size: .9rem; margin-top: .75rem; }
-  .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+  .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; margin: 0; align-items: start; }
+  .shots figcaption { grid-column: 1 / -1; }
   .hero > *, .shots > * { min-width: 0; }
   .shots img { width: 100%; border-radius: 14px; border: 1px solid var(--line); }
   section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
@@ -66,6 +67,8 @@
   .sticky { position: fixed; left: 0; right: 0; bottom: 0; padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom));
             background: var(--card); border-top: 1px solid var(--line); display: flex; justify-content: center; }
   .sticky .cta { width: 100%; max-width: 28rem; text-align: center; }
+  .ios-note { display: none; }
+  .ios .ios-note { display: block; }
   @media (min-width: 720px) {
     .hero { grid-template-columns: 1.1fr 1fr; padding: 3rem 0 4rem; }
     .grid { grid-template-columns: repeat(3, 1fr); }
@@ -88,12 +91,14 @@
         <p class="lede">Tithi, Nakshatra, Rahu Kaal, Choghadiya, birth charts and 36-guna matching.
           The astronomy is computed on your phone, so the Panchang and Kundali work without internet.</p>
         <a class="cta" href="https://play.google.com/store/apps/details?id=com.aistudio.astroveda.kpvqzm">Get it free on Google Play</a>
-        <p class="note">Android · Free · No account needed</p>
+        <p class="note">Android · Free with ads · No account needed</p>
+        <p class="note ios-note">On an iPhone? The iPhone app is not on the App Store yet. Open this page on an Android phone, or check back soon.</p>
       </div>
-      <div class="shots">
-        <img src="img/01-panchang.webp" alt="Daily Panchang screen showing tithi, nakshatra, sunrise and sunset" width="506" height="900">
-        <img src="img/05-kundali.webp" alt="Kundali screen with a North Indian birth chart and planetary positions" width="506" height="900">
-      </div>
+      <figure class="shots">
+        <img src="img/card-panchang-hi.webp" alt="A Revati share card in Hindi: today's Panchang for Jaipur with tithi, sunrise, sunset, nakshatra, yoga, Rahu Kaal and Abhijit Muhurat" width="414" height="736">
+        <img src="img/card-rashifal-en.webp" alt="A Revati share card in English: today's Rashifal for Virgo with rating, lucky number, colour and time" width="414" height="736">
+        <figcaption class="note">Cards the app makes to share, drawn from today's real Panchang and Rashifal.</figcaption>
+      </figure>
     </div>
 
     <section>
@@ -104,15 +109,18 @@
         <div class="card"><h3>Kundali</h3><p>Birth chart with Lagna, planetary positions and Vimshottari Dasha.</p></div>
         <div class="card"><h3>Guna Milan</h3><p>Ashtakoot 36-guna matching with Nadi, Bhakoot and Mangal dosha.</p></div>
         <div class="card"><h3>Muhurat</h3><p>Auspicious days worked out for where you are.</p></div>
-        <div class="card"><h3>Festivals &amp; numerology</h3><p>A festival calendar computed from tithi rules, and your Moolank reading.</p></div>
+        <div class="card"><h3>Festivals &amp; vrat guides</h3><p>A festival calendar computed from tithi rules, and guides for Ekadashi, Pradosh, Purnima, Amavasya, Navratri, Diwali and Shivratri with your city's timings.</p></div>
+        <div class="card"><h3>Share cards</h3><p>Send today's Panchang, your Rashifal, a Muhurat or a festival wish as a card for WhatsApp Status or a chat, in Hindi or English.</p></div>
+        <div class="card"><h3>Numerology &amp; PRO</h3><p>Your Moolank reading. Optional Revati PRO removes ads and adds AI readings; everything else is free.</p></div>
       </div>
     </section>
 
     <section>
-      <h2>More screens</h2>
+      <h2>Share a day, a muhurat or a match</h2>
+      <p>Every card carries the date, the city and a QR code for this page. Names go on a Guna Milan card only if you switch them on; birth details never do.</p>
       <div class="shots">
-        <img src="img/04-horoscope.webp" alt="Rashifal screen with a sign's rating, lucky number and lucky colour" width="506" height="900" loading="lazy">
-        <img src="img/06-matching.webp" alt="Guna Milan result showing the total guna score and dosha checks" width="506" height="900" loading="lazy">
+        <img src="img/card-muhurat-en.webp" alt="A Revati share card: a Shubh Muhurat for vehicle purchase in Jaipur with its time window" width="414" height="736" loading="lazy">
+        <img src="img/card-matching-hi.webp" alt="A Revati share card in Hindi: a Guna Milan score of 27 out of 36 with Nadi and Bhakoot dosha" width="360" height="460" loading="lazy">
       </div>
     </section>
 
@@ -133,5 +141,21 @@
 </div>
 
 <div class="sticky"><a class="cta" href="https://play.google.com/store/apps/details?id=com.aistudio.astroveda.kpvqzm">Get it free on Google Play</a></div>
+<script>
+  // A share card's link names only the kind of card (?s=rashifal). It is passed
+  // on to Google Play as the install referrer, so the app's analytics can count
+  // installs that came from shared cards. Nothing else is read or stored.
+  (function () {
+    var kinds = ['rashifal', 'panchang', 'festival', 'muhurat', 'matching', 'kundali'];
+    var s = new URLSearchParams(location.search).get('s');
+    if (kinds.indexOf(s) >= 0) {
+      var referrer = encodeURIComponent('utm_source=revati_app&utm_medium=share&utm_campaign=' + s);
+      document.querySelectorAll('a[href^="https://play.google.com/"]').forEach(function (a) {
+        a.href += '&referrer=' + referrer;
+      });
+    }
+    if (/iPhone|iPad|iPod/.test(navigator.userAgent)) document.documentElement.classList.add('ios');
+  })();
+</script>
 </body>
 </html>
