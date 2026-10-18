@@ -91,6 +91,7 @@
         <p class="lede">Tithi, Nakshatra, Rahu Kaal, Choghadiya, birth charts and 36-guna matching.
           The astronomy is computed on your phone, so the Panchang and Kundali work without internet.</p>
         <a class="cta" href="https://play.google.com/store/apps/details?id=com.aistudio.astroveda.kpvqzm">Get it free on Google Play</a>
+        <p class="note" id="invite" hidden>Your friend's code: <b></b></p>
         <p class="note">Android · Free with ads · No account needed</p>
         <p class="note ios-note">On an iPhone? The iPhone app is not on the App Store yet. Open this page on an Android phone, or check back soon.</p>
       </div>
@@ -144,12 +145,25 @@
 <script>
   // A share card's link names only the kind of card (?s=rashifal). It is passed
   // on to Google Play as the install referrer, so the app's analytics can count
-  // installs that came from shared cards. Nothing else is read or stored.
+  // installs that came from shared cards. A friend's invite (?ref=CODE, eight
+  // letters and digits) goes on to Play the same way, so the app can fill the
+  // code in; the page shows it too, for a phone that has to type it. Nothing
+  // else is read or stored.
   (function () {
     var kinds = ['rashifal', 'panchang', 'festival', 'muhurat', 'matching', 'kundali'];
-    var s = new URLSearchParams(location.search).get('s');
-    if (kinds.indexOf(s) >= 0) {
-      var referrer = encodeURIComponent('utm_source=revati_app&utm_medium=share&utm_campaign=' + s);
+    var params = new URLSearchParams(location.search);
+    var s = params.get('s');
+    var ref = (params.get('ref') || '').toUpperCase();
+    var referrer = null;
+    if (/^[A-HJKMNP-Z2-9]{8}$/.test(ref)) {
+      referrer = encodeURIComponent('ref=' + ref);
+      var invite = document.getElementById('invite');
+      invite.querySelector('b').textContent = ref;
+      invite.hidden = false;
+    } else if (kinds.indexOf(s) >= 0) {
+      referrer = encodeURIComponent('utm_source=revati_app&utm_medium=share&utm_campaign=' + s);
+    }
+    if (referrer !== null) {
       document.querySelectorAll('a[href^="https://play.google.com/"]').forEach(function (a) {
         a.href += '&referrer=' + referrer;
       });
