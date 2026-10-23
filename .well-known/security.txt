@@ -1,0 +1,5 @@
+Contact: mailto:supportrevati@gmail.com
+Expires: 2027-10-23T00:00:00.000Z
+Preferred-Languages: en, hi
+Canonical: https://sksaini946230-rgb.github.io/.well-known/security.txt
+Policy: https://sksaini946230-rgb.github.io/privacy.html
